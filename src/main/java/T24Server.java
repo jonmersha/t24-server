@@ -8,12 +8,8 @@ public class T24Server {
         ServerSocket ss=new ServerSocket(80);
         Socket s=ss.accept();
         DataOutputStream dout=new DataOutputStream(s.getOutputStream());
-        int x=0;
         try {
-            while(x<500){
             dout.writeUTF("Hello Server");
-            x++;
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
